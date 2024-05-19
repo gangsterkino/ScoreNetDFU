@@ -47,7 +47,7 @@ def validate_single_image(image_path):
 
     pred = pred.squeeze().detach().numpy()
 
-    # 处理预测结果
+
     save_pred = helpers.onehot_to_mask(np.array(pred).transpose([1, 2, 0]), palette)
     save_pred_png = helpers.array_to_img(save_pred)
 
